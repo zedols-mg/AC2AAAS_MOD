@@ -3706,7 +3706,7 @@
 	         this.getDefSolid_exsh= function() {			//機体実弾防御力+OP+Ext盾
 		       if(Parts["extens"][this.appear("extens")].property.indexOf("shield")!=-1) {
 		       return this.getDefSolid_()
-				     +eval(Parts["extens"][this.parts["extens"]].shield.defSolid+"*1.15"
+				     +eval(Parts["extens"][this.parts["extens"]].shield.defSolid+((this.parts["defSolid"]==1)?"*1.15":"")
 			     //+((this.parts["powerShield"]==1)?Parts["powerShield"].power:"")
 		     );
 	       }
@@ -3715,7 +3715,7 @@
 	         this.getDefEnergy_exsh= function() {		//機体E弾防御力+OP+Ext盾
 		       if(Parts["extens"][this.appear("extens")].property.indexOf("shield")!=-1) {
 		       return this.getDefEnergy_()
-				     +eval(Parts["extens"][this.parts["extens"]].shield.defEnergy+"*1.15"
+				     +eval(Parts["extens"][this.parts["extens"]].shield.defEnergy+((this.parts["defEnergy"]==1)?"*1.15":"")
 			     //+((this.parts["powerShield"]==1)?Parts["powerShield"].power:"")
 		     );
 	       }
@@ -3724,7 +3724,7 @@
 	         this.getDefSolid_hlsh= function() {			//機体実弾防御力+OP(左盾)
 		       if(Parts["handL"][this.appear("handL")].property.indexOf("shield")!=-1) {
 		       return this.getDefSolid_()
-				     +eval(Parts["handL"][this.parts["handL"]].shield.defSolid+"*1.15"
+				     +eval(Parts["handL"][this.parts["handL"]].shield.defSolid+((this.parts["defSolid"]==1)?"*1.15":"")
 					      +((this.parts["powerHandL"]==1)?Parts["powerHandL"].power:""));
 		       //+((this.parts["powerShield"]==1)?Parts["powerShield"].power:""));
 		       //} else if(Parts["handHL"][this.appear("handHL")].property.indexOf("shield")!=-1) {
@@ -3737,7 +3737,7 @@
 	         this.getDefEnergy_hlsh= function() {		//機体E弾防御力+OP(左盾)
 		       if(Parts["handL"][this.appear("handL")].property.indexOf("shield")!=-1) {
 		       return this.getDefEnergy_()
-				     +eval(Parts["handL"][this.parts["handL"]].shield.defEnergy+"*1.15"
+				     +eval(Parts["handL"][this.parts["handL"]].shield.defEnergy+((this.parts["defEnergy"]==1)?"*1.15":"")
 					      +((this.parts["powerHandL"]==1)?Parts["powerHandL"].power:""));
 		       //+((this.parts["powerShield"]==1)?Parts["powerShield"].power:""));
 		       //} else if(Parts["handHL"][this.appear("handHL")].property.indexOf("shield")!=-1) {
